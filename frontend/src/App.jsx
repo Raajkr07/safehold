@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import './styles/App.css'
+import { useState } from 'react';
+import './styles/App.css';
 import '@mantine/core/styles.css';
 import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './routes/AppRoutes';
@@ -11,7 +11,7 @@ const theme = createTheme({
   headings: { fontFamily: "merriweather, serif" },
   colors: {
 
-
+    // green color
     primary: [
       '#f1fcfa', // 50
       '#cff8ef', // 100
@@ -52,7 +52,6 @@ const theme = createTheme({
       '#101113',
     ],
   },
-  
   primaryColor: "primary",
   primaryShade: 4,
   defaultGradient: {
@@ -70,15 +69,22 @@ const theme = createTheme({
 });
 
 function App() {
+  const [colorScheme, setColorScheme] = useState("dark");
+
+  const toggleColorScheme = () =>
+    setColorScheme((current) => (current === "dark" ? "light" : "dark"));
 
   return (
-
-    <MantineProvider theme={theme} defaultColorScheme="dark" withGlobalStyles>
+    <MantineProvider
+      theme={{ ...theme, colorScheme }}
+      withGlobalStyles
+      withNormalizeCSS
+    >
       <BrowserRouter>
-        <AppRoutes />
+        <AppRoutes toggleColorScheme={toggleColorScheme} colorScheme={colorScheme} />
       </BrowserRouter>
     </MantineProvider>
-  )
+  );
 }
 
-export default App
+export default App;
