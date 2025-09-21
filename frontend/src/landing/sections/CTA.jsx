@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight, Check } from "lucide-react";
+import { Link, useNavigate } from 'react-router-dom';
 
 const features = [
   "14-day free trial",
@@ -9,6 +10,8 @@ const features = [
 ];
 
 const CTASection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className=" py-20 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -28,13 +31,17 @@ const CTASection = () => {
             ))}
           </div>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-0 gap-y-4 sm:gap-x-6 sm:gap-y-0">
-            <button className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+            <Link
+            to={'/login'}
+            className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
               Start Your Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+            </Link>
+            <Link 
+            to={'https://cal.com/raajkumar'}
+            className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
               Schedule Demo
-            </button>
+            </Link>
           </div>
           <p className="mt-6 text-sm text-gray-500">
             Trusted by 500+ businesses. Start grow your Business today.
