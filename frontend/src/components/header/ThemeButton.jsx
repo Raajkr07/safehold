@@ -13,7 +13,6 @@ const ThemeButton = () => {
         color={dark ? "yellow" : "blue"}
         onClick={() => toggleColorScheme()}
         title="Toggle color scheme"
-        aria-hidden="true"
         size="lg"
         aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
       >
