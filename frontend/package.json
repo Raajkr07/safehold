@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "start": "vite",
+    "start": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@mantine/core": "^8.3.1",
     "@mantine/dates": "^8.3.1",
     "@mantine/form": "^8.3.1",
@@ -19,6 +21,7 @@
     "class-variance-authority": "^0.7.1",
     "dayjs": "^1.11.18",
     "framer-motion": "^12.23.16",
+    "gsap": "^3.13.0",
     "lucide-react": "^0.544.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
