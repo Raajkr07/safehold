@@ -1,23 +1,25 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
-import Logo from "../../assets/logo/LogoSymbol";
+import { Link, useNavigate } from 'react-router-dom';
+import Logo from "../../assets/logo/HeaderLogo.png";
 import ThemeButton from "./ThemeButton";
+import SplitText from "../animations/SecureSpend";
 
 const navigation = [
-  { name: "Features", href: "#features" },
-  { name: "Benefits", href: "#benefits" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Pricing", href: "#pricing" },
+  { name: "Features", href: "/features" },
+  { name: "Benefits", href: "/benefits" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Demo", href: "https://cal.com/raajkumar" },
 ];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
       <header
-        className="fixed top-0 left-0 w-full bg-opacity-90 backdrop-blur-md z-50 shadow-sm"
+        className="fixed top-0 left-0 w-full bg-opacity-90 backdrop-blur-md z-50"
         style={{ height: "70px" }}
       >
         <nav
@@ -26,8 +28,21 @@ const Header = () => {
         >
           <div className="flex items-center lg:flex-1 h-full">
             <Link to="/" className="flex items-center gap-x-3">
-              <Logo width={80} height={70} />
-              <span className="text-xl font-semibold text-primary">Safe Hold</span>
+              <img src={Logo} alt="" className="h-10 w-10"/>
+              {/* <span className="text-xl font-semibold text-primary">Secure Spend</span> */}
+              <SplitText
+                text="Secure Spend"
+                className="text-xl font-semibold text-primary"
+                delay={150}
+                duration={0.5}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="center"
+              />
             </Link>
           </div>
 
@@ -44,24 +59,24 @@ const Header = () => {
 
           <div className="hidden lg:flex lg:gap-x-12 items-center h-full">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
-                className="text-sm font-medium hover:underline leading-6 hover:text-primary transition-colors"
+                to={item.href}
+                className="text-sm font-medium hover:underline font-mono leading-6 hover:text-primary transition-colors"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
 
           <div className="hidden lg:flex lg:items-center lg:flex-1 lg:justify-end lg:gap-x-4 h-full">
             <ThemeButton />
-            <button
-              type="button"
-              className="text-sm leading-6 px-4 py-2 rounded-md text-white font-bold bg-primary hover:bg-yellow-400 dark:hover:bg-yellow-400 transition-colors"
+            <Link
+              to="/login"
+              className="inline-flex items-center font-bold text-white justify-center bg-primary hover:bg-yellow-400 px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg transition-all duration-200 text-xs sm:text-sm shadow-md hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 h-[36px] sm:h-[42px] no-underline"
             >
-              Log in
-            </button>
+              Login
+            </Link>
           </div>
         </nav>
       </header>
@@ -70,12 +85,12 @@ const Header = () => {
 
       {mobileMenuOpen && (
         <div className="lg:hidden">
-          <div className="fixed inset-0 z-50 bg-black/30 dark:bg-black/70" />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="fixed inset-0 z-50" />
+          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-aut bg-opacity-90 backdrop-blur-md px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link to="/" className="flex items-center gap-x-3">
-                <Logo width="32" height="32" />
-                <span className="text-lg font-semibold">Safe Hold</span>
+                <img src={Logo} alt="SS" className="h-10 w-10"/>
+                <span className="text-lg font-semibold">Secure Spend</span>
               </Link>
               <button
                 type="button"
@@ -91,26 +106,26 @@ const Header = () => {
               <div className="-my-6 divide-y divide-gray-500/10 dark:divide-gray-700">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:bg-gray-50 dark:hover:bg-gray-800"
+                      to={item.href}
+                      className="-mx-3 block rounded-lg px-3 py-2 font-mono text-base leading-7 hover:bg-gray-50 dark:hover:bg-gray-800"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
 
                 <div className="py-6">
                   <div className="space-y-2">
                     <ThemeButton />
-                    <button
-                      type="button"
-                      className="w-full text-base font-semibold leading-7 rounded-md px-3.5 py-2 bg-primary hover:bg-primary-dark dark:bg-primary-dark dark:hover:bg-primary transition-colors"
+                    <Link
+                      to="/login"
+                      className="w-full sm:w-auto flex items-center font-bold justify-center bg-primary hover:bg-yellow-400 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg transition-all duration-200 text-sm sm:text-base shadow-md hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 h-[42px] no-underline"
                     >
-                      Log in
-                    </button>
+                      Login
+                    </Link>
                   </div>
                 </div>
               </div>
