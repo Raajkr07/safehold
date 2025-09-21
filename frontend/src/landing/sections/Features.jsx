@@ -78,7 +78,7 @@ const FeaturesSection = () => {
             return (
               <div
                 key={index}
-                className="relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 group rounded-lg p-6"
+                className="relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-100 group rounded-lg p-6 hover:scale-110"
               >
                 <div className="pb-4">
                   <div className="flex items-center gap-x-4">
