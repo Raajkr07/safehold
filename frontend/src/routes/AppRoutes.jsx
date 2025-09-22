@@ -2,7 +2,7 @@ import React, { lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import LandingPage from '../landing/LandingPage';
-import Features from '../pages/Features';
+import Working from '../pages/Working';
 import Benefits from '../pages/Benefits';
 import Pricing from '../pages/Pricing';
 import Tutorials from '../pages/Videos';
@@ -17,7 +17,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/features" element={<Features />} />
+      <Route path="/working" element={<Working />} />
       <Route path="/benefits" element={<Benefits />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/tutorials" element={<Tutorials />} />
