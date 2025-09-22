@@ -3,8 +3,8 @@ import Bitcoin from '../images/bitcoin.jpeg'
 
 const stats = [
   { label: "Businesses Served", value: "500+" },
-  { label: "Average Cost Savings", value: "23%" },
-  { label: "Hours Saved Monthly", value: "15+" },
+  { label: "Average Cost Savings", value: "25%" },
+  { label: "Hours Saved Monthly", value: "10+" },
   { label: "Customer Satisfaction", value: "98%" }
 ];
 
