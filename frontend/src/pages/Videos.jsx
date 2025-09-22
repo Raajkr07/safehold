@@ -8,15 +8,18 @@ const Card = ({ children, className }) => (
 
 const Video = () => {
   return (
-    <section className="py-18 sm:py-16 lg:py-16 min-h-screen">
+    <section className="py-6 sm:py-12 lg:py-16">
         <Header/>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 bg-clip-text text-transparent tracking-tight">
             Watch Our Featured Video
           </h1>
           <p className="mt-6 text-lg leading-8">
-            Learn how our platform helps small businesses streamline finances and boost growth.
+            Learn how our platform helps businesses streamline finances and boost growth.
+          </p>
+          <p className="mt-6 text-lg leading-8">
+            We will launching our tutorial Soon, till then connect with us.
           </p>
         </div>
 
