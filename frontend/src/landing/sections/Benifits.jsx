@@ -3,8 +3,8 @@ import { CheckCircle } from "lucide-react";
 import BusinessOwnerImage from '../images/bussiness-owner.jpeg';
 
 const benefits = [
-  "Save 15+ hours per month on financial admin",
-  "Reduce business expenses by up to 23%",
+  "Save 10+ hours per month on financial admin",
+  "Reduce business expenses by up to 25%",
   "Improve cash flow predictability by 40%",
   "Streamline tax preparation and compliance",
   "Make data-driven business decisions",
