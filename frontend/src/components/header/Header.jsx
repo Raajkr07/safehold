@@ -6,7 +6,7 @@ import ThemeButton from "./ThemeButton";
 import SplitText from "../animations/SecureSpend";
 
 const navigation = [
-  { name: "Features", href: "/features" },
+  { name: "Working", href: "/Working" },
   { name: "Benefits", href: "/benefits" },
   { name: "Pricing", href: "/pricing" },
   { name: "Demo", href: "https://cal.com/raajkumar" },
