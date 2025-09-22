@@ -11,22 +11,22 @@ const navigation = {
     { name: "Integrations", href: "#" },
   ],
   support: [
-    { name: "Documentation", href: "#" },
-    { name: "Help Center", href: "#" },
+    { name: "Schedule Demo", href: "https://cal.com/raajkumar" },
     { name: "Contact Us", href: "#" },
     { name: "Status", href: "#" },
+    { name: "FAQ", href: "#" },
   ],
-  company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
+  Resources: [
+    { name: "Documentation", href: "#" },
+    { name: "Working", href: "#" },
     { name: "Careers", href: "#" },
-    { name: "Press", href: "#" },
+    { name: "Blog", href: "#" },
   ],
   legal: [
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
-    { name: "Cookie Policy", href: "#" },
-    { name: "GDPR", href: "#" },
+    { name: "Terms of Service", href: "#" },
+    { name: "Privacy Policy", href: "#" },
+    { name: "Pricing Policy", href: "#" },
+    { name: "Security", href: "#" },
   ],
   social: [
     { name: "Facebook", href: "#", icon: Facebook },
@@ -43,7 +43,7 @@ const Footer = () => {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-16 sm:pb-8 lg:px-8 lg:pt-16 lg:pb-8">
+      <div className=" mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-16 sm:pb-8 lg:px-8 lg:pt-16 lg:pb-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           {/* Logo and Description */}
           <div className="space-y-6">
@@ -58,10 +58,10 @@ const Footer = () => {
             </p>
           </div>
           {/* Navigation Links */}
-          <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+          <div className="mt-12 grid grid-cols-1 gap-8 xl:col-span-2 xl:mt-0">
+            {/* <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold">Product</h3>
+                <h3 className="text-sm font-semibold">PRODUCT</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.product.map((item) => (
                     <li key={item.name}>
@@ -75,8 +75,11 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
+              
+            </div> */}
+            <div className="md:grid md:grid-cols-3 md:gap-8">
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold">Support</h3>
+                <h3 className="text-sm font-semibold">SUPPORT</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
@@ -90,12 +93,10 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold">Company</h3>
+                <h3 className="text-sm font-semibold">RESOURCES</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.company.map((item) => (
+                  {navigation.Resources.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -108,7 +109,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold">Legal</h3>
+                <h3 className="text-sm font-semibold">LEGAL</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
@@ -125,6 +126,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
         {/* copyright and social links */}
         <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-gray-400/30 pt-8 sm:flex-row sm:gap-0">
           <p className="text-xs ">Copyright &copy; 2025 Secure Spend.</p>
