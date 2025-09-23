@@ -11,6 +11,8 @@ import Tutorials from '../pages/Videos';
 import Login from '../auth/pages/Login';
 import Signup from '../auth/pages/Signup';
 import ForgotPassword from '../auth/pages/ForgotPassword';
+import OTP from '../auth/pages/OTP';
+import ResetPassword from '../auth/pages/ResetPassword';
 
 import Dashboard from '../app/dashboard/Dashboard';
 
@@ -27,6 +29,8 @@ const AppRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/otp" element={<OTP />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
 
       <Route path='app/dashboard' element={<Dashboard/>} />
       
