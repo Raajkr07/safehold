@@ -106,15 +106,15 @@ const ForgotPassword = () => {
           </div>
 
           <Button type="submit" className="w-full font-bold text-white bg-primary hover:bg-primary/90">
-            Send reset link
+            Send Forgot link
           </Button>
         </form>
 
         <div className="text-center">
           <p className="text-sm text-muted-foreground">
-            Remember your password?{" "}
+            Password just clicked?{" "}
             <Link to="/login" className="text-primary hover:underline">
-              Back to sign in
+              sign in
             </Link>
           </p>
         </div>

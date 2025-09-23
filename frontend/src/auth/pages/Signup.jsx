@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { Link, useNavigate } from 'react-router-dom';
+import Error from "../../components/error/Error";
 import AuthLayout from "./Layout";
 
 const Button = ({ children, className = "", variant = "default", ...props }) => {
@@ -62,7 +63,7 @@ const Signup = ({ onNavigate }) => {
         <AuthLayout>
             <div className="space-y-4">
                 <div className="text-center">
-                    <h2 className="text-2xl">Create your account</h2>
+                    <h2 className="text-2xl">We’d love to have you</h2>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -175,11 +176,11 @@ const Signup = ({ onNavigate }) => {
                             className="text-sm text-muted-foreground leading-5"
                         >
                             I agree to the{" "}
-                            <a href="#" className="text-primary hover:underline">
+                            <a href="/not-found" className="text-primary hover:underline">
                                 Terms of Service
                             </a>{" "}
                             and{" "}
-                            <a href="#" className="text-primary hover:underline">
+                            <a href="/not-found" className="text-primary hover:underline">
                                 Privacy Policy
                             </a>
                         </Label>
@@ -197,7 +198,7 @@ const Signup = ({ onNavigate }) => {
                 <div className="relative">
                     <div className="relative flex justify-center text-xs uppercase">
                         <span className="bg-card px-2 text-muted-foreground">
-                            Or continue with
+                            Or
                         </span>
                     </div>
                 </div>
@@ -238,7 +239,7 @@ const Signup = ({ onNavigate }) => {
 
                 <div className="text-center">
                     <p className="text-sm text-muted-foreground">
-                        Already have an account?{" "}
+                        Already a member?{" "}
                         <Link
                             to='/login'
                             className="text-primary hover:underline"

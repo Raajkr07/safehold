@@ -122,7 +122,7 @@ const Login = ({ onNavigate }) => {
         <div className="relative">
           <div className="relative flex justify-center text-xs uppercase">
             <span className="bg-card px-2 text-muted-foreground">
-              Or continue with
+              Or
             </span>
           </div>
         </div>
@@ -163,7 +163,8 @@ const Login = ({ onNavigate }) => {
 
         <div className="text-center">
           <p className="text-sm text-muted-foreground">
-            Don&apos;t have an account?{" "}
+            {/* Don&apos;t have an account?{" "} */}
+            Not a member yet?{" "}
             <Link
               to='/signup'
               className="text-primary hover:underline"
