@@ -12,7 +12,7 @@ import Login from '../auth/pages/Login';
 import Signup from '../auth/pages/Signup';
 import ForgotPassword from '../auth/pages/ForgotPassword';
 
-import Dashboard from '../app/Dashboard';
+import Dashboard from '../app/dashboard/Dashboard';
 
 const AppRoutes = () => {
   return (
