@@ -1,6 +1,6 @@
 import React from "react";
 import Header from '../components/header/Header';
-import Footer from '../components/footer/AuthFooter';
+import Footer from '../components/footer/AppFooter';
 
 const Card = ({ children, className }) => (
   <div className={`rounded-xl bg-white shadow-lg p-6 ${className}`}>{children}</div>

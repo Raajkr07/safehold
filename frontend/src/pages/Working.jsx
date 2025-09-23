@@ -31,7 +31,7 @@ import {
   Database
 } from 'lucide-react';
 import Header from '../components/header/Header';
-import Footer from '../components/footer/AuthFooter';
+import Footer from '../components/footer/AppFooter';
 
 const mainSteps = [
   {

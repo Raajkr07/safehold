@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { Check, Star, Zap, Crown, Sparkles, ArrowRight } from 'lucide-react';
 import Header from '../components/header/Header';
-import Footer from '../components/footer/AuthFooter';
+import Footer from '../components/footer/AppFooter';
 
 const features = [
   "14-day free trial",
