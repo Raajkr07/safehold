@@ -2,13 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SplitText from "../../../components/animations/SecureSpend";
 import Logo from "../../../assets/logo/HeaderLogo.png";
-import { IconSettings, IconUser, IconLogout, IconMenu2 } from '@tabler/icons-react';
+import { IconUser,IconMenu2 } from '@tabler/icons-react';
+import Profile from './sections/Profile';
 import ThemeButton from '../../../components/header/ThemeButton';
-import Navigation from './Navigation';
+import Search from './sections/Search';
+import Navigation from './sections/Navigation';
+import Notification from './sections/Notification';
+import Calendar from './sections/Calender';
+
 
 const AppHeader = ({ onTabChange }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('Home');
 
   useEffect(() => {
@@ -65,58 +69,19 @@ const AppHeader = ({ onTabChange }) => {
                   />
                 </Link>
               </div>
+
+              <Search/>
             </div>
 
             <div className="hidden md:block">
               <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
+              <Notification/>
+              <Calendar/>
               <ThemeButton />
-              <div className="relative dropdown-container">
-                <button
-                  onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
-                  className="flex items-center justify-center w-10 h-10 rounded-full transition-all cursor-pointer border-none"
-                  aria-label="User menu"
-                  style={{ backgroundColor: 'transparent', color: 'inherit' }}
-                >
-                  JD
-                </button>
-
-                {/* Profile Dropdown */}
-                {profileDropdownOpen && (
-                  <div
-                    className="absolute top-full right-0 mt-2 w-48 border rounded-lg py-2 z-50 animate-in fade-in-0 zoom-in-95 duration-200"
-                    style={{ backgroundColor: 'transparent', borderColor: 'rgba(0,0,0,0.1)' }}
-                  >
-                    <div className="px-3 py-2 text-xs font-medium border-b border-gray-100" style={{ color: 'inherit' }}>
-                      Account
-                    </div>
-                    <button
-                      className="w-full flex items-center gap-3 px-3 py-2 text-sm text-left border-none cursor-pointer hover:rounded"
-                      style={{ backgroundColor: 'transparent', color: 'inherit' }}
-                    >
-                      <IconUser size={16} />
-                      Profile
-                    </button>
-                    <button
-                      className="w-full flex items-center gap-3 px-3 py-2 text-sm text-left border-none cursor-pointer hover:rounded"
-                      style={{ backgroundColor: 'transparent', color: 'inherit' }}
-                    >
-                      <IconSettings size={16} />
-                      Settings
-                    </button>
-                    <div className="border-t my-1" style={{ borderColor: 'rgba(0,0,0,0.1)' }}></div>
-                    <button
-                      className="w-full flex items-center gap-3 px-3 py-2 text-sm text-left border-none cursor-pointer hover:rounded"
-                      style={{ backgroundColor: 'transparent', color: 'inherit' }}
-                    >
-                      <IconLogout size={16} />
-                      Logout
-                    </button>
-                  </div>
-                )}
-              </div>
+              <Profile/>
             </div>
           </div>
         </div>
