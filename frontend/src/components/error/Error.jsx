@@ -6,6 +6,15 @@ import FuzzyText from './FuzzyText';
 
 
 const Error = () => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
     useEffect(() => {
         window.history.replaceState(null, '', '/not-found');
@@ -19,7 +28,7 @@ const Error = () => {
         <AuthLayout>
             <div className="text-center">
                 <div className="text-xl font-mono md:text-2xl font-semibold text-foreground mb-8">
-                    404 | r u lost.
+                    {loading ? "404 | Loading......" : "404 | Page not found"}
                 </div>
 
                 <div className="flex justify-center">
