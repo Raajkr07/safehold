@@ -31,13 +31,13 @@ const AuthLayout = ({ children }) => {
           transform: `translate3d(${mousePos.x - 100}px, ${mousePos.y - 100}px, 0) scale(1.05)`,
           transition: "transform 0.08s cubic-bezier(0.22, 1, 0.36, 1)",
           filter: "blur(50px)",
-          mixBlendMode: "screen",
-          zIndex: 0,
+          opacity: 0.8,
+          zIndex: 1,
         }}
       />
 
-      <div className="sm:mx-auto sm:w-full sm:max-w-md flex flex-col justify-between relative z-10">
-        <div className="bg-card py-8 px-6 shadow-sm rounded-md border relative z-20 hover:shadow-[0_0_20px_rgba(83,211,71,0.6)] transition-shadow duration-200">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md flex flex-col justify-between  relative z-10">
+        <div className="bg-card py-8 px-6 shadow-sm rounded-md border relative z-20  hover:shadow-[0_0_20px_rgba(83,211,71,0.6)] transition-shadow duration-200">
           {children}
         </div>
       </div>
