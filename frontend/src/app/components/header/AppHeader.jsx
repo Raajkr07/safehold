@@ -6,9 +6,10 @@ import { IconSettings, IconUser, IconLogout, IconMenu2 } from '@tabler/icons-rea
 import ThemeButton from '../../../components/header/ThemeButton';
 import Navigation from './Navigation';
 
-const AppHeader = ({ activeTab, onTabChange }) => {
+const AppHeader = ({ onTabChange }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('Home');
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -51,7 +52,7 @@ const AppHeader = ({ activeTab, onTabChange }) => {
                   <img src={Logo} alt="" className="h-10 w-10" />
                   <SplitText
                     text="Workplace"
-                    className="text-xl font-semibold"
+                    className="text-xl text-primary font-mono font-semibold"
                     delay={150}
                     duration={0.5}
                     ease="power3.out"
@@ -66,15 +67,12 @@ const AppHeader = ({ activeTab, onTabChange }) => {
               </div>
             </div>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:block">
-              <Navigation activeTab={activeTab} onTabChange={onTabChange} />
+              <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
             </div>
 
-            {/* RIGHT SECTION - Actions */}
             <div className="flex items-center gap-3">
               <ThemeButton />
-              {/* Profile Menu */}
               <div className="relative dropdown-container">
                 <button
                   onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
