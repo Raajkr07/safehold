@@ -6,51 +6,30 @@ const projects = [
     category: "Design",
     url: "/projects/1",
     expenses: 1200,
-    users: [
-      { name: "Alice", avatar: "/avatars/alice.png" },
-      { name: "Bob", avatar: "/avatars/bob.png" }
-    ]
   },
   {
     title: "Mobile App Development",
     category: "Development",
     url: "/projects/2",
     expenses: 3400,
-    users: [
-      { name: "Charlie", avatar: "/avatars/charlie.png" },
-      { name: "Dana", avatar: "/avatars/dana.png" },
-      { name: "Eve", avatar: "/avatars/eve.png" }
-    ]
   },
   {
     title: "Marketing Campaign",
     category: "Marketing",
     url: "/projects/3",
     expenses: 2200,
-    users: [
-      { name: "Frank", avatar: "/avatars/frank.png" },
-      { name: "Grace", avatar: "/avatars/grace.png" }
-    ]
   },
   {
     title: "Cloud Migration",
     category: "IT Infrastructure",
     url: "/projects/4",
     expenses: 5100,
-    users: [
-      { name: "Hank", avatar: "/avatars/hank.png" },
-      { name: "Ivy", avatar: "/avatars/ivy.png" }
-    ]
   },
   {
     title: "Customer Support Portal",
     category: "Customer Success",
     url: "/projects/5",
     expenses: 1800,
-    users: [
-      { name: "Jack", avatar: "/avatars/jack.png" },
-      { name: "Karen", avatar: "/avatars/karen.png" }
-    ]
   }
 ];
 
@@ -106,7 +85,7 @@ const Expense = () => {
               href={project.url}
               className="hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md group rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm"
             >
-              <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-3 items-center">
+              <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
                 <div>
                   <dt className="sr-only">Title</dt>
                   <dd className="group-hover:text-white font-semibold text-slate-900">
@@ -122,21 +101,7 @@ const Expense = () => {
                 <div>
                   <dt className="sr-only">Expenses</dt>
                   <dd className="text-green-600 font-medium group-hover:text-white">
-                    ${project.expenses.toLocaleString()}
-                  </dd>
-                </div>
-                <div className="col-start-2 row-start-1 row-end-4 sm:mt-4 lg:mt-0 xl:mt-4">
-                  <dt className="sr-only">Users</dt>
-                  <dd className="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
-                    {project.users.map((user, idx) => (
-                      <img
-                        key={idx}
-                        src={user.avatar}
-                        alt={user.name}
-                        className="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white"
-                        loading="lazy"
-                      />
-                    ))}
+                    ₹ {project.expenses.toLocaleString()}
                   </dd>
                 </div>
               </dl>
@@ -158,7 +123,7 @@ const Expense = () => {
             >
               <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z" />
             </svg>
-            New project
+            Add Expense
           </a>
         </li>
       </ul>

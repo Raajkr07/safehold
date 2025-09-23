@@ -9,8 +9,8 @@ const QA = () => {
   ];
 
   return (
-    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">
+    <div className=" rounded-xl p-6 shadow-sm border border-gray-300">
+      <h3 className="text-lg font-semibold mb-4">
         Quick Actions
       </h3>
       <div className="space-y-3">
@@ -18,9 +18,9 @@ const QA = () => {
           <button
             key={index}
             className={`
-              w-full text-left p-3 rounded-lg border border-gray-200
-              hover:border-[#53D347] hover:bg-[#53D347]/5
-              transition-all duration-200 text-sm font-medium
+              w-full text-left p-3 rounded-lg border border-gray-300
+              hover:border-primary hover:bg-primary/5
+              transition-all duration-200 text-sm font-medium hover:scale-105
             `}
           >
             {action}
