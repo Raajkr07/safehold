@@ -16,7 +16,7 @@ const ThemeButton = () => {
         size="lg"
         aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
       >
-        {dark ? <Sun size={18} /> : <Moon size={18} />}
+        {dark ? <Sun size={20} /> : <Moon size={20} />}
       </ActionIcon>
     </Tooltip>
   );
