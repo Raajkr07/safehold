@@ -4,36 +4,30 @@ import { Facebook, Twitter, Linkedin, Instagram, Github } from "lucide-react";
 import Logo from "../../assets/logo/HeaderLogo.png";
 
 const navigation = {
-  product: [
-    { name: "Features", href: "#" },
-    { name: "Pricing", href: "#" },
-    { name: "Security", href: "#" },
-    { name: "Integrations", href: "#" },
-  ],
   support: [
     { name: "Schedule Demo", href: "https://cal.com/raajkumar" },
-    { name: "Contact Us", href: "#" },
-    { name: "Status", href: "#" },
-    { name: "FAQ", href: "#" },
+    { name: "Contact Us", href: "/not-found" },
+    { name: "Status", href: "/not-found" },
+    { name: "FAQ", href: "/not-found" },
   ],
   Resources: [
-    { name: "Documentation", href: "#" },
-    { name: "Working", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Blog", href: "#" },
+    { name: "Documentation", href: "/not-found" },
+    { name: "Working", href: "/not-found" },
+    { name: "Careers", href: "/not-found" },
+    { name: "Blog", href: "/not-found" },
   ],
   legal: [
-    { name: "Terms of Service", href: "#" },
-    { name: "Privacy Policy", href: "#" },
-    { name: "Pricing Policy", href: "#" },
-    { name: "Security", href: "#" },
+    { name: "Terms of Service", href: "/not-found" },
+    { name: "Privacy Policy", href: "/not-found" },
+    { name: "Pricing Policy", href: "/not-found" },
+    { name: "Security", href: "/not-found" },
   ],
   social: [
-    { name: "Facebook", href: "#", icon: Facebook },
-    { name: "Instagram", href: "#", icon: Instagram },
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "LinkedIn", href: "#", icon: Linkedin },
-    { name: "GitHub", href: "#", icon: Github },
+    { name: "Facebook", href: "/not-found", icon: Facebook },
+    { name: "Instagram", href: "/not-found", icon: Instagram },
+    { name: "Twitter", href: "/not-found", icon: Twitter },
+    { name: "LinkedIn", href: "/not-found", icon: Linkedin },
+    { name: "GitHub", href: "/not-found", icon: Github },
   ],
 };
 
@@ -43,8 +37,8 @@ const Footer = () => {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className=" mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-16 sm:pb-8 lg:px-8 lg:pt-16 lg:pb-8">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+      <div className=" mx-auto  max-w-7xl px-6 pt-16 pb-8 sm:pt-16 sm:pb-8 lg:px-8 lg:pt-16 lg:pb-8">
+        <div className="xl:grid  xl:grid-cols-3 xl:gap-8">
           {/* Logo and Description */}
           <div className="space-y-6">
             <div className="flex items-center gap-x-3">
@@ -53,33 +47,17 @@ const Footer = () => {
               </Link>
               <span className="text-xl font-bold text-primary">Secure Spend</span>
             </div>
-            <p className="text-sm leading-6 max-w-sm">
-              This tool gives businesses a complete picture of their finances so they can grow steadily and succeed over time.
+            <p className="text-sm font-sans leading-6 max-w-sm">
+              This tool gives businesses a complete picture<br/>
+               of their finances so they can grow steadily <br />
+               and succeed over time.
             </p>
           </div>
           {/* Navigation Links */}
-          <div className="mt-12 grid grid-cols-1 gap-8 xl:col-span-2 xl:mt-0">
-            {/* <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold">PRODUCT</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.product.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm hover:text-primary hover:underline transition-colors"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-            </div> */}
+          <div className="mt-12 grid lg:ml-60 grid-cols-1 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-3 md:gap-8">
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold">SUPPORT</h3>
+                <h3 className="text-sm font-semibold underline">SUPPORT</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
@@ -93,8 +71,8 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
-              <div>
-                <h3 className="text-sm font-semibold">RESOURCES</h3>
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm font-semibold underline">RESOURCES</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.Resources.map((item) => (
                     <li key={item.name}>
@@ -109,7 +87,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold">LEGAL</h3>
+                <h3 className="text-sm font-semibold underline">LEGAL</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
