@@ -9,7 +9,7 @@ const RecentAlerts = () => {
       borderColor: 'border-yellow-400'
     },
     {
-      message: 'Payment received from Client ABC',
+      message: 'Payment received from Client Raj',
       type: 'success',
       bgColor: 'bg-green-50',
       borderColor: 'border-green-400'
@@ -23,8 +23,8 @@ const RecentAlerts = () => {
   ];
 
   return (
-    <div className="bg-white rounded-xl p-6 shadow border border-gray-200">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">
+    <div className="rounded-xl p-6 shadow border bg-gray-700 border-gray-300">
+      <h3 className="text-lg text-white font-semibold mb-4">
         Recent Alerts
       </h3>
       <div className="space-y-3">
