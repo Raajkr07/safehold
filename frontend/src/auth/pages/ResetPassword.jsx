@@ -164,9 +164,8 @@ const ResetPassword = () => {
 
         <div className="text-center">
           <p className="text-sm text-muted-foreground">
-            Remember your password?{" "}
-            <Link to="/login" className="text-primary hover:underline">
-              Back to sign in
+            <Link to="/app/dashboard" className="text-primary hover:underline">
+              Back to Dashboard
             </Link>
           </p>
         </div>
