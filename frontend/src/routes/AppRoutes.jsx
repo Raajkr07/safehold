@@ -15,6 +15,8 @@ import OTP from '../auth/pages/OTP';
 import ResetPassword from '../auth/pages/ResetPassword';
 
 import Dashboard from '../app/dashboard/Dashboard';
+import Ledger from '../app/pages/ledger/Ledger';
+import Fund from '../app/pages/fund/Fund';
 
 const AppRoutes = () => {
   return (
@@ -33,6 +35,8 @@ const AppRoutes = () => {
       <Route path="/reset-password" element={<ResetPassword />} />
 
       <Route path='app/dashboard' element={<Dashboard/>} />
+      <Route path='app/ledger' element={<Ledger/>} />
+      <Route path='app/fund' element={<Fund/>} />
       
       {/* Catch-all unwanted URL and redirect to LandingPage */}
       <Route path="*" element={<Navigate to="/" replace />} />
