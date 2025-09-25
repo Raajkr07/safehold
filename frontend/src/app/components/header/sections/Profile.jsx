@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { IconUserCircle, IconSettings, IconLogout } from '@tabler/icons-react';
+import { IconUserCircle, IconSettings, IconLogout, IconLockSquareRounded } from '@tabler/icons-react';
 
 const Profile = () => {
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
@@ -36,6 +36,15 @@ const Profile = () => {
           >
             <IconSettings size={18} />
             Settings
+          </Link>
+
+          <Link
+            to="/reset-password"
+            className="w-full flex items-center gap-3 px-3 py-2 text-sm text-left border-none cursor-pointer hover:rounded"
+            onClick={() => setProfileDropdownOpen(false)}
+          >
+            <IconLockSquareRounded size={18} />
+            Reset Password
           </Link>
 
           <div className="border-t my-1" style={{ borderColor: 'rgba(0,0,0,0.1)' }}></div>
