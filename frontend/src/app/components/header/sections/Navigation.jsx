@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  IconCopyCheck,
+  IconClipboardText,
   IconTrendingUp,
   IconReport,
   IconWallet,
@@ -12,24 +12,30 @@ import {
   IconMenu2,
   IconX,
 } from '@tabler/icons-react';
+import { Link, useLocation } from 'react-router-dom';
 
-const Navigation = ({ activeTab = 'Home', onTabChange }) => {
+const Navigation = ({ onTabChange }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
   const visibleNavigationItems = [
-    { id: 'Home', label: 'Home', icon: IconHome },
-    { id: 'Ledger', label: 'Ledger', icon: IconCopyCheck },
-    { id: 'fund', label: 'Fund', icon: IconWallet },
-    { id: 'team', label: 'Team', icon: IconUsersGroup },
+    { id: 'Home', label: 'Home', icon: IconHome, href: "/app/dashboard" },
+    { id: 'Ledger', label: 'Ledger', icon: IconClipboardText, href: "/app/ledger" },
+    { id: 'fund', label: 'Fund', icon: IconWallet, href: "/app/fund" },
+    { id: 'team', label: 'Team', icon: IconUsersGroup, href: "#" },
   ];
 
   const dropdownNavigationItems = [
-    { id: 'cashflow', label: 'Cash Flow', icon: IconTrendingUp },
-    { id: 'reports', label: 'Reports', icon: IconReport },
-    { id: 'vendors', label: 'Vendors', icon: IconBuilding },
-    { id: 'analytics', label: 'Analytics', icon: IconFileAnalytics },
+    { id: 'cashflow', label: 'Cash Flow', icon: IconTrendingUp, href: "#" },
+    { id: 'reports', label: 'Reports', icon: IconReport, href: "#" },
+    { id: 'vendors', label: 'Vendors', icon: IconBuilding, href: "#" },
+    { id: 'analytics', label: 'Analytics', icon: IconFileAnalytics, href: "#" },
   ];
+
+  const allItems = [...visibleNavigationItems, ...dropdownNavigationItems];
+  const activeItem = allItems.find((item) => location.pathname.startsWith(item.href));
+  const activeTab = activeItem ? activeItem.id : 'Home';
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -41,8 +47,14 @@ const Navigation = ({ activeTab = 'Home', onTabChange }) => {
     return () => document.removeEventListener('click', handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    if (onTabChange) {
+      onTabChange(activeTab);
+    }
+  }, [activeTab, onTabChange]);
+
   const handleNavigation = (tabId) => {
-    onTabChange(tabId);
+    if (onTabChange) onTabChange(tabId);
     setDropdownOpen(false);
     setMobileOpen(false);
   };
@@ -54,9 +66,11 @@ const Navigation = ({ activeTab = 'Home', onTabChange }) => {
         {visibleNavigationItems.map((item) => {
           const IconComponent = item.icon;
           const isActive = activeTab === item.id;
+          const link = item.href;
 
           return (
-            <button
+            <Link
+              to={link}
               key={item.id}
               onClick={() => handleNavigation(item.id)}
               className={`
@@ -67,7 +81,7 @@ const Navigation = ({ activeTab = 'Home', onTabChange }) => {
             >
               <IconComponent size={20} />
               <span className="font-medium">{item.label}</span>
-            </button>
+            </Link>
           );
         })}
 
