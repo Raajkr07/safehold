@@ -5,7 +5,8 @@ import Notfound from '../components/error/Error';
 import LandingPage from '../landing/LandingPage';
 import Working from '../pages/Working';
 import Benefits from '../pages/Benefits';
-import Pricing from '../pages/Pricing';
+import Pricing from '../pages/plans/Pricing';
+import Payment from '../pages/plans/PaymentPage';
 import Tutorials from '../pages/Videos';
 
 import Login from '../auth/pages/Login';
@@ -26,6 +27,7 @@ const AppRoutes = () => {
       <Route path="/working" element={<Working />} />
       <Route path="/benefits" element={<Benefits />} />
       <Route path="/pricing" element={<Pricing />} />
+      <Route path="/payment" element={<Payment />} />
       <Route path="/tutorials" element={<Tutorials />} />
 
       <Route path="/login" element={<Login />} />
