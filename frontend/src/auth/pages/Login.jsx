@@ -173,6 +173,18 @@ const Login = ({ onNavigate }) => {
             </Link>
           </p>
         </div>
+
+        {/* provided the dashboard link for viewing purpose because this is static website. */}
+        <div className="text-center">
+          <p className="text-sm text-muted-foreground">
+            <Link
+              to='/app/dashboard'
+              className="text-primary hover:underline"
+            >
+              Dashboard
+            </Link>
+          </p>
+        </div>
       </div>
     </AuthLayout>
   );
