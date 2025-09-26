@@ -69,11 +69,12 @@ const Header = () => {
             ))}
           </div>
 
+          {/* change the border when click from default to primary color */}
           <div className="hidden lg:flex lg:items-center lg:flex-1 lg:justify-end lg:gap-x-4 h-full">
             <ThemeButton />
             <Link
               to="/login"
-              className="inline-flex items-center font-bold text-white justify-center bg-primary hover:bg-yellow-400 px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg transition-all duration-200 text-xs sm:text-sm shadow-md hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 h-[36px] sm:h-[42px] no-underline"
+              className="inline-flex items-center font-bold text-white justify-center bg-primary hover:bg-yellow-400 px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg transition-all duration-200 text-xs sm:text-sm shadow-md hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 h-[36px] sm:h-[42px] no-underline"
             >
               Login
             </Link>
