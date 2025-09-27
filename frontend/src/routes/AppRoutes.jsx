@@ -9,6 +9,7 @@ import Pricing from '../pages/plans/Pricing';
 import Payment from '../pages/plans/PaymentPage';
 import Tutorials from '../pages/Videos';
 
+import Logout from './Logout';
 import Login from '../auth/pages/Login';
 import Signup from '../auth/pages/Signup';
 import ForgotPassword from '../auth/pages/ForgotPassword';
@@ -18,6 +19,7 @@ import ResetPassword from '../auth/pages/ResetPassword';
 import Dashboard from '../app/dashboard/Dashboard';
 import Ledger from '../app/pages/ledger/Ledger';
 import Fund from '../app/pages/fund/Fund';
+import Health from '../app/pages/health/HealthPage';
 
 const AppRoutes = () => {
   return (
@@ -30,6 +32,7 @@ const AppRoutes = () => {
       <Route path="/payment" element={<Payment />} />
       <Route path="/tutorials" element={<Tutorials />} />
 
+      <Route path="/logout" element={<Logout />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -39,6 +42,7 @@ const AppRoutes = () => {
       <Route path='app/dashboard' element={<Dashboard/>} />
       <Route path='app/ledger' element={<Ledger/>} />
       <Route path='app/fund' element={<Fund/>} />
+      <Route path='app/health' element={<Health/>} />
       
       {/* Catch-all unwanted URL and redirect to LandingPage */}
       <Route path="*" element={<Navigate to="/" replace />} />
