@@ -11,6 +11,7 @@ import {
   IconHome,
   IconMenu2,
   IconX,
+  IconDeviceHeartMonitor,
 } from '@tabler/icons-react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -23,12 +24,13 @@ const Navigation = ({ onTabChange }) => {
     { id: 'Home', label: 'Home', icon: IconHome, href: "/app/dashboard" },
     { id: 'Ledger', label: 'Ledger', icon: IconClipboardText, href: "/app/ledger" },
     { id: 'fund', label: 'Fund', icon: IconWallet, href: "/app/fund" },
-    { id: 'team', label: 'Team', icon: IconUsersGroup, href: "#" },
+    { id: 'health', label: 'Health', icon: IconDeviceHeartMonitor, href: "/app/health" },
   ];
 
   const dropdownNavigationItems = [
     { id: 'cashflow', label: 'Cash Flow', icon: IconTrendingUp, href: "#" },
     { id: 'reports', label: 'Reports', icon: IconReport, href: "#" },
+    { id: 'team', label: 'Team', icon: IconUsersGroup, href: "#" },
     { id: 'vendors', label: 'Vendors', icon: IconBuilding, href: "#" },
     { id: 'analytics', label: 'Analytics', icon: IconFileAnalytics, href: "#" },
   ];
